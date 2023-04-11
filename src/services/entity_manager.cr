@@ -10,13 +10,13 @@ class Blog::Services::EntityManager
     {% end %}
   end
 
-  def remove(entity : DB::Serializable) : Nil
-    entity.on_remove if entity.responds_to? :on_remove
+  def remove(entity : Blog::Entities::Entity) : Nil
+    entity.on_remove
     self.update entity
   end
 
-  def persist(entity : DB::Serializable) : Nil
-    entity.before_save if entity.responds_to? :before_save
+  def persist(entity : Blog::Entities::Entity) : Nil
+    entity.before_save
 
     id = if entity.id?.nil?
            self.save entity
