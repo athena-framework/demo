@@ -68,4 +68,4 @@ As such, we are not going to get into the specifics of _HOW_ to deploy the blog 
 ## Contributing
 
 Have an idea/feature common/useful enough to be worthy of including into the application?
-Create an issue and we can see about getting that included.
+Create an issue and we can see about having it included.
