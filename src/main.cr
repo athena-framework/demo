@@ -40,6 +40,10 @@ end
 # Setup common to both CLI and HTTP contexts
 
 # Load in `.env` files.
-Athena::Dotenv
-  .new(Athena::ENV_NAME)
-  .load_environment("./.env")
+private ENV_FILE_NAME = "./.env"
+
+if File.file? ENV_FILE_NAME
+  Athena::Dotenv
+    .new(Athena::ENV_NAME)
+    .load_environment(ENV_FILE_NAME)
+end
