@@ -1,11 +1,11 @@
 require "athena"
+require "athena-dotenv"
 
 require "pg"
 
 require "json"
 
 require "./commands/*"
-require "./domain/*"
 
 require "./entities/entity"
 require "./entities/repository"
@@ -14,8 +14,6 @@ require "./entities/created_at_aware"
 require "./entities/updated_at_aware"
 require "./entities/*"
 
-require "./exceptions/*"
-require "./listeners/*"
 require "./resolvers/*"
 require "./services/*"
 
@@ -40,3 +38,8 @@ module Blog
 end
 
 # Setup common to both CLI and HTTP contexts
+
+# Load in `.env` files.
+Athena::Dotenv
+  .new(Athena::ENV_NAME)
+  .load_environment("./.env")

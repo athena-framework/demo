@@ -1,11 +1,11 @@
 @[ADI::Register]
 class Blog::Services::EntityManager
-  @@database : DB::Database = DB.open ENV["DATABASE_URL"]
+  protected class_getter database : DB::Database { DB.open ENV["DATABASE_URL"] }
 
   macro finished
     {% for entity in Blog::Entities::Entity.subclasses %}
       def repository(entity_class : {{entity.id}}.class) : {{entity.id}}::Repository
-        @@{{entity.name.split("::").last.downcase.id}}_repository ||= {{entity.id}}::Repository.new @@database
+        @@{{entity.name.split("::").last.downcase.id}}_repository ||= {{entity.id}}::Repository.new self.class.database
       end
     {% end %}
   end
@@ -28,7 +28,7 @@ class Blog::Services::EntityManager
   end
 
   private def save(entity : Blog::Entities::Article) : Int64
-    @@database.scalar(
+    self.class.database.scalar(
       %(INSERT INTO "articles" ("title", "body", "created_at", "updated_at", "deleted_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id";),
       entity.title,
       entity.body,
@@ -39,7 +39,7 @@ class Blog::Services::EntityManager
   end
 
   private def update(entity : Blog::Entities::Article) : Nil
-    @@database.exec(
+    self.class.database.exec(
       %(UPDATE "articles" SET "title" = $1, "body" = $2, "updated_at" = $3, "deleted_at" = $4 WHERE "id" = $5;),
       entity.title,
       entity.body,

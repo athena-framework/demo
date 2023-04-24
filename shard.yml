@@ -16,6 +16,9 @@ dependencies:
   athena:
     github: athena-framework/framework
     version: ~> 0.18.0
+  athena-dotenv:
+    github: athena-framework/dotenv
+    version: ~> 0.1.0
   pg:
     github: will/crystal-pg
     version: ~> 0.26.0
