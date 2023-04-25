@@ -12,7 +12,12 @@ require "./entities/created_at_aware"
 require "./entities/updated_at_aware"
 require "./entities/*"
 
+require "./commands/*"
+require "./listeners/*"
+require "./resolvers/*"
+
 require "./services/*"
+require "./controllers/*"
 
 module Blog
   VERSION = "0.1.0"

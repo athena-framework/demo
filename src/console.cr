@@ -1,5 +1,4 @@
 require "./main"
-require "./commands/*"
 
 # Setup specific to the `CLI` context
 
