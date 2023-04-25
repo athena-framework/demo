@@ -1,5 +1,6 @@
 require "./main"
 
+require "./listeners/*"
 require "./resolvers/*"
 require "./controllers/*"
 
