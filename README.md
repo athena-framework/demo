@@ -16,8 +16,6 @@ If you prefer a more hands on approach, keep reading on to learn how to get it r
   * `shards install`
 * Start the database
   * Via the provided `docker-compose.yaml` file: `docker compose up -d`
-* Export the `DATABASE_URL`
-  * Via the one within `.env` (TODO: Create a `dot-env` component to do this automatically)
 * Scaffold the DB schema
   * `shards run console -- db:migrate`
 * Validate the setup by running the specs
