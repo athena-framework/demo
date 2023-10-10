@@ -3,6 +3,15 @@
 An example demo simple blog API web application using the [Athena Framework](https://athenaframework.org/#athena-framework).
 Demonstrates what a real-world API using the framework would look like, with some [considerations](#considerations).
 
+The blog is intended to showcase various framework features while still being approachable and not overly complex.
+This includes:
+
+* A controller to handle CRUD operations on an `Article` entity, leveraging a simple repository pattern ORM
+* A custom [ACON::Command](https://athenaframework.org/Console/Command/) to run DB migrations
+* A simple request/transaction ID implementation using a dedicated [service](https://athenaframework.org/why_athena/#services) and [AED::EventListenerInterface](https://athenaframework.org/EventDispatcher/Annotations/AsEventListener/)
+* A database focused [ATHR::Interface](https://athenaframework.org/Framework/Controller/ValueResolvers/Interface/) to resolve an entity from the DB as a controller action argument
+* Unit/integration test on all of the above
+
 The application was created using the [Athena Skeleton](https://github.com/athena-framework/skeleton) template,
 which would be a good starting point to learn about the overall suggested organizational structure of an Athena Framework application.
 The blog API continues on with the pattern of including a `README.md` file within each directory that adds some commentary/explanation of what each directory/file does.
