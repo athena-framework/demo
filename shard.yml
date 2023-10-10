@@ -1,4 +1,4 @@
-name: skeleton
+name: athena-demo-blog
 
 version: 0.1.0
 
@@ -16,11 +16,20 @@ dependencies:
   athena:
     github: athena-framework/framework
     version: ~> 0.18.0
+  athena-dotenv:
+    github: athena-framework/dotenv
+    version: ~> 0.1.0
+  pg:
+    github: will/crystal-pg
+    version: ~> 0.26.0
+  micrate:
+    github: amberframework/micrate
+    version: ~> 0.15.0
 
 development_dependencies:
   ameba:
     github: crystal-ameba/ameba
-    version: ~> 1.4.0
+    version: ~> 1.5.0
   athena-spec:
     github: athena-framework/spec
     version: ~> 0.3.0

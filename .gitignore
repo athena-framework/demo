@@ -1,5 +1,10 @@
+.idea/
+
 docs/
 lib/
 bin/
 .shards/
 *.dwarf
+
+.env.local
+.env.*.local

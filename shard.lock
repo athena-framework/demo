@@ -2,11 +2,11 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 1.4.3
+    version: 1.5.0
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.18.0
+    version: 0.18.1
 
   athena-config:
     git: https://github.com/athena-framework/config.git
@@ -19,6 +19,10 @@ shards:
   athena-dependency_injection:
     git: https://github.com/athena-framework/dependency-injection.git
     version: 0.3.6
+
+  athena-dotenv:
+    git: https://github.com/athena-framework/dotenv.git
+    version: 0.1.0
 
   athena-event_dispatcher:
     git: https://github.com/athena-framework/event-dispatcher.git
@@ -34,7 +38,7 @@ shards:
 
   athena-routing:
     git: https://github.com/athena-framework/routing.git
-    version: 0.1.6
+    version: 0.1.7
 
   athena-serializer:
     git: https://github.com/athena-framework/serializer.git
@@ -42,9 +46,29 @@ shards:
 
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.3.4
+    version: 0.3.5
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
     version: 0.3.1
+
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.11.0
+
+  micrate:
+    git: https://github.com/amberframework/micrate.git
+    version: 0.15.0
+
+  mysql:
+    git: https://github.com/crystal-lang/crystal-mysql.git
+    version: 0.14.0
+
+  pg:
+    git: https://github.com/will/crystal-pg.git
+    version: 0.26.0
+
+  sqlite3:
+    git: https://github.com/crystal-lang/crystal-sqlite3.git
+    version: 0.19.0
 
