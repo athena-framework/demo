@@ -32,18 +32,33 @@ jobs:
       image: crystallang/crystal:latest
     steps:
       - uses: actions/checkout@v3
+      # Workaround https://github.com/amberframework/micrate/issues/87
+      - name: Install Lib Dependencies
+        run: apt update && apt upgrade -y && apt install -y libsqlite3-dev
       - name: Install Dependencies
         run: shards install
       - name: Ameba
         run: ./bin/ameba
   test:
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: blog_test_user
+          POSTGRES_PASSWORD: 'mYAw3s0meB!og'
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 2s
+          --health-timeout 10s
+          --health-retries 5
     strategy:
       fail-fast: false
       matrix:
         os:
           - ubuntu-latest
-          - macos-latest
-          # - windows-latest
         crystal:
           - latest
           - nightly
