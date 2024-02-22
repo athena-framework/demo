@@ -24,7 +24,7 @@ dependencies:
     version: ~> 0.26.0
   micrate:
     github: amberframework/micrate
-    version: ~> 0.15.0
+    version: ~> 0.15.1
 
 development_dependencies:
   ameba:
