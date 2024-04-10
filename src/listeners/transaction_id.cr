@@ -1,7 +1,5 @@
 @[ADI::Register]
 class Blog::Listeners::TransactionId
-  include AED::EventListenerInterface
-
   def initialize(
     @transaction_id_store : Blog::Services::TransactionIdStore
   ); end
