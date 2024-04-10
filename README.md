@@ -8,7 +8,7 @@ This includes:
 
 * A controller to handle CRUD operations on an `Article` entity, leveraging a simple repository pattern ORM
 * A custom [ACON::Command](https://athenaframework.org/Console/Command/) to run DB migrations
-* A simple request/transaction ID implementation using a dedicated [service](https://athenaframework.org/why_athena/#services) and [AED::EventListenerInterface](https://athenaframework.org/EventDispatcher/Annotations/AsEventListener/)
+* A simple request/transaction ID implementation using a dedicated [service](https://athenaframework.org/why_athena/#services) and [Event Listener](https://athenaframework.org/EventDispatcher/Annotations/AsEventListener/)
 * A database focused [ATHR::Interface](https://athenaframework.org/Framework/Controller/ValueResolvers/Interface/) to resolve an entity from the DB as a controller action argument
 * Unit/integration test on all of the above
 
