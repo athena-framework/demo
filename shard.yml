@@ -15,7 +15,7 @@ targets:
 dependencies:
   athena:
     github: athena-framework/framework
-    commit: 5b922c248e3facaa16b42386041154341ce81459
+    version: ~> 0.19.0
   athena-dotenv:
     github: athena-framework/dotenv
     version: ~> 0.1.0

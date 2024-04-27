@@ -1,4 +1,0 @@
-dependencies:
-  athena-serializer:
-    github: athena-framework/serializer
-    commit: 857e4f4f41cc297e23923970fd0626613b2e0f10
