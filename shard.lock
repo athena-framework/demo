@@ -6,7 +6,7 @@ shards:
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.19.1
+    version: 0.19.2
 
   athena-clock:
     git: https://github.com/athena-framework/clock.git
@@ -14,15 +14,15 @@ shards:
 
   athena-console:
     git: https://github.com/athena-framework/console.git
-    version: 0.3.5
+    version: 0.3.6
 
   athena-dependency_injection:
     git: https://github.com/athena-framework/dependency-injection.git
-    version: 0.4.0
+    version: 0.4.1
 
   athena-dotenv:
     git: https://github.com/athena-framework/dotenv.git
-    version: 0.1.2
+    version: 0.1.3
 
   athena-event_dispatcher:
     git: https://github.com/athena-framework/event-dispatcher.git
@@ -46,11 +46,11 @@ shards:
 
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.3.7
+    version: 0.3.8
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
-    version: 0.3.3
+    version: 0.3.4
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
