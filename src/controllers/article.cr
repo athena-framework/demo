@@ -1,13 +1,13 @@
 @[ADI::Register]
 class Blog::Controllers::ArticleController < ATH::Controller
   def initialize(
-    @entity_manager : Blog::Services::EntityManager
+    @entity_manager : Blog::Services::EntityManager,
   ); end
 
   @[ARTA::Post("/article")]
   def create_article(
     @[ATHR::RequestBody::Extract]
-    article : Blog::Entities::Article
+    article : Blog::Entities::Article,
   ) : Blog::Entities::Article
     @entity_manager.persist article
     article
@@ -19,7 +19,7 @@ class Blog::Controllers::ArticleController < ATH::Controller
     article_entity : Blog::Entities::Article,
 
     @[ATHR::RequestBody::Extract]
-    article : Blog::Entities::Article
+    article : Blog::Entities::Article,
   ) : Blog::Entities::Article
     article_entity.title = article.title
     article_entity.body = article.body
@@ -31,7 +31,7 @@ class Blog::Controllers::ArticleController < ATH::Controller
   @[ARTA::Get("/article/{id}")]
   def article(
     @[Blog::Entity]
-    article : Blog::Entities::Article
+    article : Blog::Entities::Article,
   ) : Blog::Entities::Article
     article
   end
@@ -44,7 +44,7 @@ class Blog::Controllers::ArticleController < ATH::Controller
   @[ARTA::Delete("/article/{id}")]
   def delete_article(
     @[Blog::Entity]
-    article : Blog::Entities::Article
+    article : Blog::Entities::Article,
   ) : Nil
     @entity_manager.remove article
   end

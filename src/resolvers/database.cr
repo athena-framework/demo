@@ -5,7 +5,7 @@ struct Blog::Resolvers::Database
   configuration Entity
 
   def initialize(
-    @entity_manager : Blog::Services::EntityManager
+    @entity_manager : Blog::Services::EntityManager,
   ); end
 
   # :inherit:

@@ -9,7 +9,7 @@ class Blog::Services::TransactionIdStore
   setter transaction_id : String? = nil
 
   def initialize(
-    @request_store : ATH::RequestStore
+    @request_store : ATH::RequestStore,
   ); end
 
   def transaction_id : String
