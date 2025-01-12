@@ -1,7 +1,7 @@
 @[ADI::Register]
 class Blog::Listeners::TransactionId
   def initialize(
-    @transaction_id_store : Blog::Services::TransactionIdStore
+    @transaction_id_store : Blog::Services::TransactionIdStore,
   ); end
 
   @[AEDA::AsEventListener]
