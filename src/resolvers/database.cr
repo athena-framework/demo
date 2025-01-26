@@ -2,7 +2,7 @@
 struct Blog::Resolvers::Database
   include ATHR::Interface::Typed(Blog::Entities::Entity)
 
-  configuration Entity
+  configuration ::Blog::Resolvers::Database::Entity
 
   def initialize(
     @entity_manager : Blog::Services::EntityManager,
@@ -17,7 +17,7 @@ struct Blog::Resolvers::Database
 
       unless entity = @entity_manager.repository(E).find? id
         Log.context.set entity_class: E.name, id: id
-        raise ATH::Exceptions::NotFound.new "An item with the provided ID could not be found."
+        raise ATH::Exception::NotFound.new "An item with the provided ID could not be found."
       end
 
       entity
