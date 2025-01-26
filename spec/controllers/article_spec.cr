@@ -17,7 +17,9 @@ struct ArticleControllerTest < IntegrationTestCase
   end
 
   def test_post_article : Nil
-    response = self.post "/article", body: %({"title":"TITLE","body":"BODY"})
+    response = self.post "/article", body: %({"title":"TITLE","body":"BODY"}), headers: HTTP::Headers{"content-type" => "application/json"}
+
+    self.assert_response_is_successful
 
     article = JSON.parse response.body
     article["title"].as_s.should eq "TITLE"
@@ -36,7 +38,7 @@ struct ArticleControllerTest < IntegrationTestCase
     entity.title.should eq "TITLE"
     entity.body.should eq "BODY"
 
-    self.put "/article/#{id}", body: %({"title":"NEW_TITLE","body":"NEW_BODY"})
+    self.put "/article/#{id}", body: %({"title":"NEW_TITLE","body":"NEW_BODY"}), headers: HTTP::Headers{"content-type" => "application/json"}
 
     self.assert_response_is_successful
 

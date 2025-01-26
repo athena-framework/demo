@@ -6,7 +6,7 @@ class Blog::Controllers::ArticleController < ATH::Controller
 
   @[ARTA::Post("/article")]
   def create_article(
-    @[ATHR::RequestBody::Extract]
+    @[ATHA::MapRequestBody]
     article : Blog::Entities::Article,
   ) : Blog::Entities::Article
     @entity_manager.persist article
@@ -18,7 +18,7 @@ class Blog::Controllers::ArticleController < ATH::Controller
     @[Blog::Entity]
     article_entity : Blog::Entities::Article,
 
-    @[ATHR::RequestBody::Extract]
+    @[ATHA::MapRequestBody]
     article : Blog::Entities::Article,
   ) : Blog::Entities::Article
     article_entity.title = article.title
