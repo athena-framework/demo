@@ -6,7 +6,7 @@ shards:
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.20.0
+    version: 0.20.1
 
   athena-clock:
     git: https://github.com/athena-framework/clock.git
@@ -14,11 +14,11 @@ shards:
 
   athena-console:
     git: https://github.com/athena-framework/console.git
-    version: 0.4.0
+    version: 0.4.1
 
   athena-dependency_injection:
     git: https://github.com/athena-framework/dependency-injection.git
-    version: 0.4.2
+    version: 0.4.3
 
   athena-dotenv:
     git: https://github.com/athena-framework/dotenv.git
@@ -42,11 +42,11 @@ shards:
 
   athena-serializer:
     git: https://github.com/athena-framework/serializer.git
-    version: 0.4.0
+    version: 0.4.1
 
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.3.9
+    version: 0.3.10
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
