@@ -42,11 +42,11 @@ shards:
 
   athena-serializer:
     git: https://github.com/athena-framework/serializer.git
-    version: 0.4.1
+    version: 0.4.2
 
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.3.10
+    version: 0.3.11
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
