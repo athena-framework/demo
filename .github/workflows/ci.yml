@@ -64,6 +64,8 @@ jobs:
           - nightly
     runs-on: ${{ matrix.os }}
     steps:
+      - name: Install System Dependencies
+        run: sudo apt-get update && sudo apt install -y libmagic-dev
       - uses: actions/checkout@v5
       - name: Install Crystal
         uses: crystal-lang/install-crystal@v1
