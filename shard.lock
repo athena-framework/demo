@@ -6,7 +6,7 @@ shards:
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.21.0
+    version: 0.21.1
 
   athena-clock:
     git: https://github.com/athena-framework/clock.git
@@ -46,7 +46,7 @@ shards:
 
   athena-routing:
     git: https://github.com/athena-framework/routing.git
-    version: 0.1.11
+    version: 0.1.12
 
   athena-serializer:
     git: https://github.com/athena-framework/serializer.git
