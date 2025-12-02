@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Check Spelling
-        uses: crate-ci/typos@v1.39.0
+        uses: crate-ci/typos@v1.40.0
   check_format:
     runs-on: ubuntu-latest
     container:
