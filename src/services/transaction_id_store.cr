@@ -4,12 +4,12 @@ require "uuid"
 class Blog::Services::TransactionIdStore
   HEADER_NAME = "x-transaction-id"
 
-  @request_store : ATH::RequestStore
+  @request_store : AHTTP::RequestStore
 
   setter transaction_id : String? = nil
 
   def initialize(
-    @request_store : ATH::RequestStore,
+    @request_store : AHTTP::RequestStore,
   ); end
 
   def transaction_id : String
@@ -20,7 +20,7 @@ class Blog::Services::TransactionIdStore
     @transaction_id = self.create_transaction_id @request_store.request
   end
 
-  private def create_transaction_id(request : ATH::Request) : String
+  private def create_transaction_id(request : AHTTP::Request) : String
     if id = request.headers[HEADER_NAME]?
       return id
     end

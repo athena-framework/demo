@@ -1,0 +1,13 @@
+dependencies:
+  athena-dependency_injection:
+    path: ../athena/src/components/dependency_injection
+  athena-event_dispatcher:
+    path: ../athena/src/components/event_dispatcher
+  athena-http_kernel:
+    path: ../athena/src/components/http_kernel
+  athena-mercure:
+    path: ../athena/src/components/mercure
+  athena-http:
+    path: ../athena/src/components/http
+  athena-routing:
+    path: ../athena/src/components/routing

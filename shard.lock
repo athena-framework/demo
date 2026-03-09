@@ -1,3 +1,4 @@
+# NOTICE: This lockfile contains some overrides from shard.override.yml
 version: 2.0
 shards:
   ameba:
@@ -6,7 +7,7 @@ shards:
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.21.1
+    version: 0.21.1+git.commit.1171f3f18382c9c234e2477405b56f40b0c9f2af
 
   athena-clock:
     git: https://github.com/athena-framework/clock.git
@@ -20,21 +21,37 @@ shards:
     git: https://github.com/athena-framework/contracts.git
     version: 0.1.0
 
-  athena-dependency_injection:
-    git: https://github.com/athena-framework/dependency-injection.git
+  athena-dependency_injection: # Overridden
+    path: ../athena/src/components/dependency_injection
     version: 0.4.4
 
   athena-dotenv:
     git: https://github.com/athena-framework/dotenv.git
-    version: 0.2.0
+    version: 0.2.1+git.commit.4b248aa120dcaca585b205c6e12b8f3f9f2f29c8
 
-  athena-event_dispatcher:
-    git: https://github.com/athena-framework/event-dispatcher.git
+  athena-event_dispatcher: # Overridden
+    path: ../athena/src/components/event_dispatcher
     version: 0.4.0
+
+  athena-http: # Overridden
+    path: ../athena/src/components/http
+    version: 0.1.0
+
+  athena-http_kernel: # Overridden
+    path: ../athena/src/components/http_kernel
+    version: 0.1.0
 
   athena-image_size:
     git: https://github.com/athena-framework/image-size.git
     version: 0.1.4
+
+  athena-mercure: # Overridden
+    path: ../athena/src/components/mercure
+    version: 0.1.0
+
+  athena-mercure_bundle:
+    path: ../athena/src/bundles/mercure
+    version: 0.1.0
 
   athena-mime:
     git: https://github.com/athena-framework/mime.git
@@ -44,8 +61,8 @@ shards:
     git: https://github.com/athena-framework/negotiation.git
     version: 0.2.0
 
-  athena-routing:
-    git: https://github.com/athena-framework/routing.git
+  athena-routing: # Overridden
+    path: ../athena/src/components/routing
     version: 0.1.12
 
   athena-serializer:
@@ -54,15 +71,27 @@ shards:
 
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.4.0
+    version: 0.4.1
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
     version: 0.4.1
 
+  bindata:
+    git: https://github.com/spider-gazelle/bindata.git
+    version: 2.1.1
+
   db:
     git: https://github.com/crystal-lang/crystal-db.git
     version: 0.11.0
+
+  ed25519:
+    git: https://github.com/spider-gazelle/ed25519.git
+    version: 1.1.0
+
+  jwt:
+    git: https://github.com/crystal-community/jwt.git
+    version: 1.7.1
 
   micrate:
     git: https://github.com/amberframework/micrate.git
@@ -71,6 +100,10 @@ shards:
   mysql:
     git: https://github.com/crystal-lang/crystal-mysql.git
     version: 0.14.0
+
+  openssl_ext:
+    git: https://github.com/spider-gazelle/openssl_ext.git
+    version: 2.8.4
 
   pg:
     git: https://github.com/will/crystal-pg.git
