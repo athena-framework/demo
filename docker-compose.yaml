@@ -2,6 +2,7 @@ services:
   postgres:
     image: postgres:17-alpine
     container_name: postgres
+    restart: unless-stopped
     ports:
       - 5432:5432
     environment:
@@ -13,6 +14,7 @@ services:
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
   mercure:
     image: dunglas/mercure
+    container_name: mercure-hub
     restart: unless-stopped
     environment:
       SERVER_NAME: ':80' # Disable HTTPS for local dev
