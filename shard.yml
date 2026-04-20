@@ -15,10 +15,10 @@ targets:
 dependencies:
   athena:
     github: athena-framework/framework
-    branch: master
+    version: ~> 0.22.0
   athena-dotenv:
     github: athena-framework/dotenv
-    branch: master
+    version: ~> 0.2.0
   pg:
     github: will/crystal-pg
     version: ~> 0.26.0
@@ -26,7 +26,8 @@ dependencies:
     github: amberframework/micrate
     version: ~> 0.15.1
   athena-mercure_bundle:
-    path: ../athena/src/bundles/mercure
+    github: athena-framework/mercure-bundle
+    version: ~> 0.1.0
 
 development_dependencies:
   ameba:
