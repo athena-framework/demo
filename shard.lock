@@ -6,15 +6,15 @@ shards:
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.21.1
+    version: 0.22.0
 
   athena-clock:
     git: https://github.com/athena-framework/clock.git
-    version: 0.2.0
+    version: 0.3.0
 
   athena-console:
     git: https://github.com/athena-framework/console.git
-    version: 0.4.2
+    version: 0.4.3
 
   athena-contracts:
     git: https://github.com/athena-framework/contracts.git
@@ -22,19 +22,35 @@ shards:
 
   athena-dependency_injection:
     git: https://github.com/athena-framework/dependency-injection.git
-    version: 0.4.4
+    version: 0.4.5
 
   athena-dotenv:
     git: https://github.com/athena-framework/dotenv.git
-    version: 0.2.0
+    version: 0.2.1
 
   athena-event_dispatcher:
     git: https://github.com/athena-framework/event-dispatcher.git
-    version: 0.4.0
+    version: 0.4.1
+
+  athena-http:
+    git: https://github.com/athena-framework/http.git
+    version: 0.1.0
+
+  athena-http_kernel:
+    git: https://github.com/athena-framework/http-kernel.git
+    version: 0.1.0
 
   athena-image_size:
     git: https://github.com/athena-framework/image-size.git
     version: 0.1.4
+
+  athena-mercure:
+    git: https://github.com/athena-framework/mercure.git
+    version: 0.1.0
+
+  athena-mercure_bundle:
+    git: https://github.com/athena-framework/mercure-bundle.git
+    version: 0.1.0
 
   athena-mime:
     git: https://github.com/athena-framework/mime.git
@@ -46,23 +62,35 @@ shards:
 
   athena-routing:
     git: https://github.com/athena-framework/routing.git
-    version: 0.1.12
+    version: 0.2.0
 
   athena-serializer:
     git: https://github.com/athena-framework/serializer.git
-    version: 0.4.2
+    version: 0.4.3
 
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.4.0
+    version: 0.4.2
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
-    version: 0.4.1
+    version: 0.5.0
+
+  bindata:
+    git: https://github.com/spider-gazelle/bindata.git
+    version: 2.1.1
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
     version: 0.11.0
+
+  ed25519:
+    git: https://github.com/spider-gazelle/ed25519.git
+    version: 1.1.0
+
+  jwt:
+    git: https://github.com/crystal-community/jwt.git
+    version: 1.7.1
 
   micrate:
     git: https://github.com/amberframework/micrate.git
@@ -71,6 +99,10 @@ shards:
   mysql:
     git: https://github.com/crystal-lang/crystal-mysql.git
     version: 0.14.0
+
+  openssl_ext:
+    git: https://github.com/spider-gazelle/openssl_ext.git
+    version: 2.8.5
 
   pg:
     git: https://github.com/will/crystal-pg.git

@@ -8,3 +8,5 @@ bin/
 
 .env.local
 .env.*.local
+
+.shard.override.yml

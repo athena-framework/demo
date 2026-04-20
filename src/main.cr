@@ -1,5 +1,6 @@
 require "athena"
 require "athena-dotenv"
+require "athena-mercure_bundle"
 
 require "pg"
 
@@ -43,3 +44,18 @@ if File.file? ENV_FILE_NAME
     .new(ATH::ENV_NAME)
     .load_environment(ENV_FILE_NAME)
 end
+
+ADI.configure({
+  mercure: {
+    hubs: {
+      default: {
+        url: ENV["MERCURE_URL"],
+        jwt: {
+          secret:    ENV["MERCURE_JWT_SECRET"],
+          publish:   ["*"],
+          subscribe: ["*"],
+        },
+      },
+    },
+  },
+})

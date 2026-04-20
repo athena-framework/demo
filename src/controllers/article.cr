@@ -2,14 +2,24 @@
 class Blog::Controllers::ArticleController < ATH::Controller
   def initialize(
     @entity_manager : Blog::Services::EntityManager,
+    @hub : AMC::Hub::Interface,
+    @discovery : Athena::MercureBundle::Discovery,
   ); end
 
   @[ARTA::Post("/article")]
   def create_article(
+    request : AHTTP::Request,
     @[ATHA::MapRequestBody]
     article : Blog::Entities::Article,
   ) : Blog::Entities::Article
     @entity_manager.persist article
+
+    @discovery.add_link request
+    @hub.publish AMC::Update.new(
+      "https://example.com/articles/#{article.id}",
+      {id: article.id, title: article.title}.to_json,
+    )
+
     article
   end
 

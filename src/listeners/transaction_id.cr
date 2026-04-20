@@ -5,7 +5,7 @@ class Blog::Listeners::TransactionId
   ); end
 
   @[AEDA::AsEventListener]
-  def add_transaction_id(event : ATH::Events::Response) : Nil
+  def add_transaction_id(event : AHK::Events::Response) : Nil
     event.response.headers[Blog::Services::TransactionIdStore::HEADER_NAME] = @transaction_id_store.transaction_id
   end
 end
