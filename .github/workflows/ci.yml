@@ -51,6 +51,18 @@ jobs:
           - 5432:5432
         options: >-
           --health-cmd pg_isready --health-interval 2s --health-timeout 10s --health-retries 5
+      mercure-hub:
+        image: dunglas/mercure
+        env:
+          SERVER_NAME: ':80' # Disable HTTPS for local dev
+          MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
+          MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
+          MERCURE_EXTRA_DIRECTIVES: |
+            cors_origins http://localhost:3000 # Allow Athena Server
+        ports:
+          - 80:80
+        options: >-
+          --health-cmd pg_isready --health-interval 2s --health-timeout 10s --health-retries 5
     strategy:
       fail-fast: false
       matrix:
