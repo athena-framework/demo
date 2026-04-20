@@ -15,15 +15,15 @@ jobs:
   check_spelling:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Check Spelling
-        uses: crate-ci/typos@v1.45.0
+        uses: crate-ci/typos@02ea592e44b3a53c302f697cddca7641cd051c3d # v1.45.0
   check_format:
     runs-on: ubuntu-latest
     container:
       image: crystallang/crystal:latest-alpine
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Check Format
         run: crystal tool format --check
   coding_standards:
@@ -31,7 +31,7 @@ jobs:
     container:
       image: crystallang/crystal:latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       # Workaround https://github.com/amberframework/micrate/issues/87
       - name: Install Lib Dependencies
         run: apt update && apt upgrade -y && apt install -y libsqlite3-dev
@@ -50,10 +50,7 @@ jobs:
         ports:
           - 5432:5432
         options: >-
-          --health-cmd pg_isready
-          --health-interval 2s
-          --health-timeout 10s
-          --health-retries 5
+          --health-cmd pg_isready --health-interval 2s --health-timeout 10s --health-retries 5
     strategy:
       fail-fast: false
       matrix:
@@ -66,9 +63,9 @@ jobs:
     steps:
       - name: Install System Dependencies
         run: sudo apt-get update && sudo apt install -y libmagic-dev
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Install Crystal
-        uses: crystal-lang/install-crystal@v1
+        uses: crystal-lang/install-crystal@d8ef131ecec0352ce0e39b81b0a6d95def58fe2f # v1.9.2
         with:
           crystal: ${{ matrix.crystal }}
       - name: Install Dependencies
