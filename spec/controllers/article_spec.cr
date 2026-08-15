@@ -5,7 +5,7 @@ struct ArticleControllerTest < IntegrationTestCase
     id = DATABASE.scalar(<<-SQL).as Int64
       INSERT INTO "articles" (title, body, created_at, updated_at)
       VALUES ('TITLE', 'BODY', now(), now()) RETURNING "id";
-    SQL
+      SQL
 
     response = self.get "/article/#{id}"
 
@@ -32,7 +32,7 @@ struct ArticleControllerTest < IntegrationTestCase
     id = DATABASE.scalar(<<-SQL).as Int64
       INSERT INTO "articles" (title, body, created_at, updated_at)
       VALUES ('TITLE', 'BODY', now(), now()) RETURNING "id";
-    SQL
+      SQL
 
     entity = DATABASE.query_one %(SELECT * FROM "articles" WHERE "id" = $1), id, as: Blog::Entities::Article
     entity.title.should eq "TITLE"
@@ -51,7 +51,7 @@ struct ArticleControllerTest < IntegrationTestCase
     id = DATABASE.scalar(<<-SQL).as Int64
       INSERT INTO "articles" (title, body, created_at, updated_at)
       VALUES ('TITLE', 'BODY', now(), now()) RETURNING "id";
-    SQL
+      SQL
 
     entity = DATABASE.query_one %(SELECT * FROM "articles" WHERE "id" = $1), id, as: Blog::Entities::Article
     entity.deleted_at.should be_nil

@@ -1,0 +1,6 @@
+Version: "1.7.0"
+
+Lint/AssignmentInCallArgument:
+  Enabled: false
+Style/RedundantSelf: # I like being explicit to differentiate method call vs local variable
+  Enabled: false
