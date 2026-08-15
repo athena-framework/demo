@@ -4,8 +4,8 @@ class Blog::Services::EntityManager
 
   macro finished
     {% for entity in Blog::Entities::Entity.subclasses %}
-      def repository(entity_class : {{entity.id}}.class) : {{entity.id}}::Repository
-        @@{{entity.name.split("::").last.downcase.id}}_repository ||= {{entity.id}}::Repository.new self.class.database
+      def repository(entity_class : {{ entity.id }}.class) : {{ entity.id }}::Repository
+        @@{{ entity.name.split("::").last.downcase.id }}_repository ||= {{ entity.id }}::Repository.new self.class.database
       end
     {% end %}
   end
