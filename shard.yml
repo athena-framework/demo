@@ -15,16 +15,20 @@ targets:
 dependencies:
   athena:
     github: athena-framework/framework
-    version: ~> 0.22.0
+    # version: ~> 0.22.0
+    commit: 00b993677cb32fed710798fd62dccb7950ffd7ff
   athena-dotenv:
     github: athena-framework/dotenv
     version: ~> 0.2.0
+  athena-orm:
+    github: athena-framework/orm
+    commit: 19fe9193014c3770500c3a9979b42382ffe3c3ca
   pg:
     github: will/crystal-pg
-    version: ~> 0.26.0
+    version: ~> 0.31.0
   micrate:
     github: amberframework/micrate
-    version: ~> 0.15.1
+    commit: d2cb33b7ec4ada6f08d9415d22288270b90dce20
   athena-mercure_bundle:
     github: athena-framework/mercure-bundle
     version: ~> 0.1.0

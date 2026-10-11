@@ -1,13 +1,12 @@
 require "athena"
 require "athena-dotenv"
 require "athena-mercure_bundle"
+require "athena-orm/bundle"
 
 require "pg"
 
 require "json"
 
-require "./entities/entity"
-require "./entities/repository"
 require "./entities/soft_deletable"
 require "./entities/created_at_aware"
 require "./entities/updated_at_aware"
@@ -46,6 +45,9 @@ if File.file? ENV_FILE_NAME
 end
 
 ADI.configure({
+  orm: {
+    url: ENV["DATABASE_URL"],
+  },
   mercure: {
     hubs: {
       default: {

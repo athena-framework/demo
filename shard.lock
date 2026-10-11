@@ -1,12 +1,13 @@
+# NOTICE: This lockfile contains some overrides from shard.override.yml
 version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 1.6.4
+    version: 1.7.0-dev+git.commit.f53fcd3382553121239c8f144aec5e27aeadbed8
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.22.0
+    version: 0.22.0+git.commit.00b993677cb32fed710798fd62dccb7950ffd7ff
 
   athena-clock:
     git: https://github.com/athena-framework/clock.git
@@ -16,13 +17,13 @@ shards:
     git: https://github.com/athena-framework/console.git
     version: 0.4.3
 
-  athena-contracts:
+  athena-contracts: # Overridden
     git: https://github.com/athena-framework/contracts.git
-    version: 0.1.0
+    version: 0.1.0+git.commit.15eebbbb0012826de480e7fa802384d1a74f7f70
 
-  athena-dependency_injection:
+  athena-dependency_injection: # Overridden
     git: https://github.com/athena-framework/dependency-injection.git
-    version: 0.4.5
+    version: 0.4.5+git.commit.33f217758384d4d0e7ba0b797d222961f3b9a08b
 
   athena-dotenv:
     git: https://github.com/athena-framework/dotenv.git
@@ -60,6 +61,10 @@ shards:
     git: https://github.com/athena-framework/negotiation.git
     version: 0.2.0
 
+  athena-orm:
+    git: https://github.com/athena-framework/orm.git
+    version: 0.1.0+git.commit.19fe9193014c3770500c3a9979b42382ffe3c3ca
+
   athena-routing:
     git: https://github.com/athena-framework/routing.git
     version: 0.2.0
@@ -78,11 +83,11 @@ shards:
 
   bindata:
     git: https://github.com/spider-gazelle/bindata.git
-    version: 2.1.1
+    version: 3.2.1
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
-    version: 0.11.0
+    version: 0.15.0
 
   ed25519:
     git: https://github.com/spider-gazelle/ed25519.git
@@ -90,15 +95,11 @@ shards:
 
   jwt:
     git: https://github.com/crystal-community/jwt.git
-    version: 1.7.1
+    version: 1.7.2
 
   micrate:
     git: https://github.com/amberframework/micrate.git
-    version: 0.15.1
-
-  mysql:
-    git: https://github.com/crystal-lang/crystal-mysql.git
-    version: 0.14.0
+    version: 0.15.1+git.commit.d2cb33b7ec4ada6f08d9415d22288270b90dce20
 
   openssl_ext:
     git: https://github.com/spider-gazelle/openssl_ext.git
@@ -106,9 +107,5 @@ shards:
 
   pg:
     git: https://github.com/will/crystal-pg.git
-    version: 0.26.0
-
-  sqlite3:
-    git: https://github.com/crystal-lang/crystal-sqlite3.git
-    version: 0.19.0
+    version: 0.31.0
 
