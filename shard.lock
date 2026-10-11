@@ -47,11 +47,7 @@ shards:
 
   athena-mercure:
     git: https://github.com/athena-framework/mercure.git
-    version: 0.1.0
-
-  athena-mercure_bundle:
-    git: https://github.com/athena-framework/mercure-bundle.git
-    version: 0.1.0
+    version: 0.1.0+git.commit.d8a150ee661971621c60fda700fd29e43c4ce560
 
   athena-mime:
     git: https://github.com/athena-framework/mime.git

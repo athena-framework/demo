@@ -29,9 +29,9 @@ dependencies:
   micrate:
     github: amberframework/micrate
     commit: d2cb33b7ec4ada6f08d9415d22288270b90dce20
-  athena-mercure_bundle:
-    github: athena-framework/mercure-bundle
-    version: ~> 0.1.0
+  athena-mercure:
+    github: athena-framework/mercure
+    commit: d8a150ee661971621c60fda700fd29e43c4ce560
 
 development_dependencies:
   ameba:

@@ -3,7 +3,7 @@ class Blog::Controllers::ArticleController < ATH::Controller
   def initialize(
     @em : AORM::EntityManagerInterface,
     @hub : AMC::Hub::Interface,
-    @discovery : Athena::MercureBundle::Discovery,
+    @discovery : AMC::Bundle::Discovery,
   ); end
 
   @[ARTA::Post("/article")]

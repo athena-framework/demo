@@ -1,6 +1,6 @@
 require "athena"
 require "athena-dotenv"
-require "athena-mercure_bundle"
+require "athena-mercure/bundle"
 require "athena-orm/bundle"
 
 require "pg"
