@@ -16,7 +16,7 @@ dependencies:
   athena:
     github: athena-framework/framework
     # version: ~> 0.22.0
-    commit: 00b993677cb32fed710798fd62dccb7950ffd7ff
+    commit: b93089a8e9cce2d731916f2d0ec8024a50d8213a
   athena-dotenv:
     github: athena-framework/dotenv
     version: ~> 0.2.0
@@ -31,7 +31,16 @@ dependencies:
     commit: d2cb33b7ec4ada6f08d9415d22288270b90dce20
   athena-mercure:
     github: athena-framework/mercure
-    commit: d8a150ee661971621c60fda700fd29e43c4ce560
+    commit: c048f1306dee9d0163b02eed904f156e4f849cad
+  jwt:
+    github: crystal-community/jwt
+    version: ~> 1.7
+  athena-validator:
+    github: athena-framework/validator
+    commit: 79487ded2d99269e030335e158fb64e67916e97b
+  athena-console:
+    github: athena-framework/console
+    commit: 8e9c75048515d7297bce48e2d6654a14b1325d05
 
 development_dependencies:
   ameba:

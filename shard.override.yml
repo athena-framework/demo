@@ -4,4 +4,7 @@ dependencies:
     commit: 15eebbbb0012826de480e7fa802384d1a74f7f70
   athena-dependency_injection:
     github: athena-framework/dependency-injection
-    commit: 33f217758384d4d0e7ba0b797d222961f3b9a08b
+    commit: 570640d6dac3a6940b003cdd7341356c288cd0fb
+  athena-serializer:
+    github: athena-framework/serializer
+    commit: 5b658a7c07f3f119ec57f3ac2aa708a0352bc81f

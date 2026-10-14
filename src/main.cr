@@ -2,7 +2,10 @@ require "athena"
 require "athena-dotenv"
 require "athena-mercure/bundle"
 require "athena-orm/bundle"
+require "athena-validator/bundle"
+require "athena-console/bundle"
 
+require "jwt"
 require "pg"
 
 require "json"
@@ -56,6 +59,11 @@ ADI.configure({
           secret:    ENV["MERCURE_JWT_SECRET"],
           publish:   ["*"],
           subscribe: ["*"],
+          claims:    {
+            "iss"       => ENV["MERCURE_JWT_ISSUER"],
+            "sub"       => "athena-demo-blog",
+            "client_id" => "athena-demo-blog",
+          },
         },
       },
     },

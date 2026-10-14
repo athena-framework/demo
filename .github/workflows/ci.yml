@@ -57,6 +57,7 @@ jobs:
           SERVER_NAME: ':80' # Disable HTTPS for local dev
           MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
           MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
+          MERCURE_TRUSTED_ISSUERS: 'https://localhost' # The `MERCURE_JWT_ISSUER` of the Athena Server
           MERCURE_EXTRA_DIRECTIVES: |
             cors_origins http://localhost:3000 # Allow Athena Server
         ports:
