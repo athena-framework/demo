@@ -11,18 +11,19 @@ services:
       - POSTGRES_DB=postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./src/migrations/init.sql:/docker-entrypoint-initdb.d/init.sql
   mercure:
-    image: dunglas/mercure
+    image: dunglas/mercure:v1.1
     container_name: mercure-hub
     restart: unless-stopped
     environment:
       SERVER_NAME: ':80' # Disable HTTPS for local dev
       MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
       MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
+      MERCURE_TRUSTED_ISSUERS: 'https://localhost' # The `MERCURE_JWT_ISSUER` of the Athena Server
       MERCURE_EXTRA_DIRECTIVES: |
+        playground # Enable dev mode
         cors_origins http://localhost:3000 # Allow Athena Server
-    command: /usr/bin/caddy run --config /etc/caddy/dev.Caddyfile # Enable dev mode
     ports:
       - '80:80'
     volumes:

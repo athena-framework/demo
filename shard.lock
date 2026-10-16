@@ -1,12 +1,13 @@
+# NOTICE: This lockfile contains some overrides from shard.override.yml
 version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 1.6.4
+    version: 1.7.0-dev+git.commit.f53fcd3382553121239c8f144aec5e27aeadbed8
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.22.0
+    version: 0.22.0+git.commit.b93089a8e9cce2d731916f2d0ec8024a50d8213a
 
   athena-clock:
     git: https://github.com/athena-framework/clock.git
@@ -14,31 +15,31 @@ shards:
 
   athena-console:
     git: https://github.com/athena-framework/console.git
-    version: 0.4.3
+    version: 0.4.3+git.commit.8e9c75048515d7297bce48e2d6654a14b1325d05
 
-  athena-contracts:
+  athena-contracts: # Overridden
     git: https://github.com/athena-framework/contracts.git
-    version: 0.1.0
+    version: 0.1.0+git.commit.15eebbbb0012826de480e7fa802384d1a74f7f70
 
-  athena-dependency_injection:
+  athena-dependency_injection: # Overridden
     git: https://github.com/athena-framework/dependency-injection.git
-    version: 0.4.5
+    version: 0.4.5+git.commit.570640d6dac3a6940b003cdd7341356c288cd0fb
 
   athena-dotenv:
     git: https://github.com/athena-framework/dotenv.git
     version: 0.2.1
 
-  athena-event_dispatcher:
+  athena-event_dispatcher: # Overridden
     git: https://github.com/athena-framework/event-dispatcher.git
-    version: 0.4.1
+    version: 0.4.1+git.commit.06c86b6e77b93fc97a09ff9633c2028614d1ffa9
 
-  athena-http:
+  athena-http: # Overridden
     git: https://github.com/athena-framework/http.git
-    version: 0.1.0
+    version: 0.1.0+git.commit.6a14b43106c5f9aa5847cdf69c0bd9392483f00f
 
-  athena-http_kernel:
+  athena-http_kernel: # Overridden
     git: https://github.com/athena-framework/http-kernel.git
-    version: 0.1.0
+    version: 0.1.0+git.commit.53812b285df35ced660dced1b6b41d5d1e5ea37b
 
   athena-image_size:
     git: https://github.com/athena-framework/image-size.git
@@ -46,43 +47,35 @@ shards:
 
   athena-mercure:
     git: https://github.com/athena-framework/mercure.git
-    version: 0.1.0
-
-  athena-mercure_bundle:
-    git: https://github.com/athena-framework/mercure-bundle.git
-    version: 0.1.0
+    version: 0.1.0+git.commit.c048f1306dee9d0163b02eed904f156e4f849cad
 
   athena-mime:
     git: https://github.com/athena-framework/mime.git
     version: 0.2.1
 
-  athena-negotiation:
-    git: https://github.com/athena-framework/negotiation.git
-    version: 0.2.0
+  athena-orm:
+    git: https://github.com/athena-framework/orm.git
+    version: 0.1.0+git.commit.25fa7f4c0aba0b3e370497636c2c0b0a475d23a1
 
   athena-routing:
     git: https://github.com/athena-framework/routing.git
     version: 0.2.0
 
-  athena-serializer:
-    git: https://github.com/athena-framework/serializer.git
-    version: 0.4.3
-
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.4.2
+    version: 0.4.2+git.commit.4359548452e012ea5bc8794667112e4595687dd1
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
-    version: 0.5.0
+    version: 0.5.0+git.commit.79487ded2d99269e030335e158fb64e67916e97b
 
   bindata:
     git: https://github.com/spider-gazelle/bindata.git
-    version: 2.1.1
+    version: 3.2.1
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
-    version: 0.11.0
+    version: 0.15.0
 
   ed25519:
     git: https://github.com/spider-gazelle/ed25519.git
@@ -90,15 +83,7 @@ shards:
 
   jwt:
     git: https://github.com/crystal-community/jwt.git
-    version: 1.7.1
-
-  micrate:
-    git: https://github.com/amberframework/micrate.git
-    version: 0.15.1
-
-  mysql:
-    git: https://github.com/crystal-lang/crystal-mysql.git
-    version: 0.14.0
+    version: 1.7.2
 
   openssl_ext:
     git: https://github.com/spider-gazelle/openssl_ext.git
@@ -106,9 +91,5 @@ shards:
 
   pg:
     git: https://github.com/will/crystal-pg.git
-    version: 0.26.0
-
-  sqlite3:
-    git: https://github.com/crystal-lang/crystal-sqlite3.git
-    version: 0.19.0
+    version: 0.31.0
 

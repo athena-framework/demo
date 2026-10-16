@@ -1,9 +1,9 @@
 @[ADI::Register]
 class Blog::Controllers::ArticleController < ATH::Controller
   def initialize(
-    @entity_manager : Blog::Services::EntityManager,
+    @em : AORM::EntityManagerInterface,
     @hub : AMC::Hub::Interface,
-    @discovery : Athena::MercureBundle::Discovery,
+    @discovery : AMC::Bundle::Discovery,
   ); end
 
   @[ARTA::Post("/article")]
@@ -12,7 +12,8 @@ class Blog::Controllers::ArticleController < ATH::Controller
     @[ATHA::MapRequestBody]
     article : Blog::Entities::Article,
   ) : Blog::Entities::Article
-    @entity_manager.persist article
+    @em.persist article
+    @em.flush
 
     @discovery.add_link request
     @hub.publish AMC::Update.new(
@@ -34,7 +35,8 @@ class Blog::Controllers::ArticleController < ATH::Controller
     article_entity.title = article.title
     article_entity.body = article.body
 
-    @entity_manager.persist article_entity
+    @em.persist article_entity
+    @em.flush
     article_entity
   end
 
@@ -48,7 +50,7 @@ class Blog::Controllers::ArticleController < ATH::Controller
 
   @[ARTA::Get("/article")]
   def articles : Array(Blog::Entities::Article)
-    @entity_manager.repository(Blog::Entities::Article).find_all
+    @em.repository(Blog::Entities::Article).find_by deleted_at: nil
   end
 
   @[ARTA::Delete("/article/{id}")]
@@ -56,6 +58,7 @@ class Blog::Controllers::ArticleController < ATH::Controller
     @[Blog::Entity]
     article : Blog::Entities::Article,
   ) : Nil
-    @entity_manager.remove article
+    article.deleted_at = Time.utc
+    @em.flush
   end
 end

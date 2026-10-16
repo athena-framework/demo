@@ -1,13 +1,16 @@
 require "athena"
 require "athena-dotenv"
-require "athena-mercure_bundle"
+require "athena-mercure/bundle"
+require "athena-orm/bundle"
+require "athena-orm/migrations"
+require "athena-validator/bundle"
+require "athena-console/bundle"
 
+require "jwt"
 require "pg"
 
 require "json"
 
-require "./entities/entity"
-require "./entities/repository"
 require "./entities/soft_deletable"
 require "./entities/created_at_aware"
 require "./entities/updated_at_aware"
@@ -15,6 +18,7 @@ require "./entities/*"
 
 require "./commands/*"
 require "./listeners/*"
+require "./migrations/*"
 require "./resolvers/*"
 
 require "./services/*"
@@ -46,6 +50,13 @@ if File.file? ENV_FILE_NAME
 end
 
 ADI.configure({
+  orm: {
+    url:        ENV["DATABASE_URL"],
+    migrations: {
+      namespace: "Blog::Migrations",
+      directory: "#{__DIR__}/migrations",
+    },
+  },
   mercure: {
     hubs: {
       default: {
@@ -54,6 +65,11 @@ ADI.configure({
           secret:    ENV["MERCURE_JWT_SECRET"],
           publish:   ["*"],
           subscribe: ["*"],
+          claims:    {
+            "iss"       => ENV["MERCURE_JWT_ISSUER"],
+            "sub"       => "athena-demo-blog",
+            "client_id" => "athena-demo-blog",
+          },
         },
       },
     },
