@@ -29,17 +29,17 @@ shards:
     git: https://github.com/athena-framework/dotenv.git
     version: 0.2.1
 
-  athena-event_dispatcher:
+  athena-event_dispatcher: # Overridden
     git: https://github.com/athena-framework/event-dispatcher.git
-    version: 0.4.1
+    version: 0.4.1+git.commit.06c86b6e77b93fc97a09ff9633c2028614d1ffa9
 
-  athena-http:
+  athena-http: # Overridden
     git: https://github.com/athena-framework/http.git
-    version: 0.1.0
+    version: 0.1.0+git.commit.6a14b43106c5f9aa5847cdf69c0bd9392483f00f
 
-  athena-http_kernel:
+  athena-http_kernel: # Overridden
     git: https://github.com/athena-framework/http-kernel.git
-    version: 0.1.0
+    version: 0.1.0+git.commit.53812b285df35ced660dced1b6b41d5d1e5ea37b
 
   athena-image_size:
     git: https://github.com/athena-framework/image-size.git
@@ -55,7 +55,7 @@ shards:
 
   athena-orm:
     git: https://github.com/athena-framework/orm.git
-    version: 0.1.0+git.commit.19fe9193014c3770500c3a9979b42382ffe3c3ca
+    version: 0.1.0+git.commit.25fa7f4c0aba0b3e370497636c2c0b0a475d23a1
 
   athena-routing:
     git: https://github.com/athena-framework/routing.git
@@ -63,7 +63,7 @@ shards:
 
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.4.2
+    version: 0.4.2+git.commit.4359548452e012ea5bc8794667112e4595687dd1
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
@@ -84,10 +84,6 @@ shards:
   jwt:
     git: https://github.com/crystal-community/jwt.git
     version: 1.7.2
-
-  micrate:
-    git: https://github.com/amberframework/micrate.git
-    version: 0.15.1+git.commit.d2cb33b7ec4ada6f08d9415d22288270b90dce20
 
   openssl_ext:
     git: https://github.com/spider-gazelle/openssl_ext.git

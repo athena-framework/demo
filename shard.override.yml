@@ -5,6 +5,12 @@ dependencies:
   athena-dependency_injection:
     github: athena-framework/dependency-injection
     commit: 570640d6dac3a6940b003cdd7341356c288cd0fb
-  athena-serializer:
-    github: athena-framework/serializer
-    commit: 5b658a7c07f3f119ec57f3ac2aa708a0352bc81f
+  athena-event_dispatcher:
+    github: athena-framework/event-dispatcher
+    commit: 06c86b6e77b93fc97a09ff9633c2028614d1ffa9
+  athena-http:
+    github: athena-framework/http
+    commit: 6a14b43106c5f9aa5847cdf69c0bd9392483f00f
+  athena-http_kernel:
+    github: athena-framework/http-kernel
+    commit: 53812b285df35ced660dced1b6b41d5d1e5ea37b

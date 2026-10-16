@@ -2,6 +2,7 @@ require "athena"
 require "athena-dotenv"
 require "athena-mercure/bundle"
 require "athena-orm/bundle"
+require "athena-orm/migrations"
 require "athena-validator/bundle"
 require "athena-console/bundle"
 
@@ -17,6 +18,7 @@ require "./entities/*"
 
 require "./commands/*"
 require "./listeners/*"
+require "./migrations/*"
 require "./resolvers/*"
 
 require "./services/*"
@@ -49,7 +51,11 @@ end
 
 ADI.configure({
   orm: {
-    url: ENV["DATABASE_URL"],
+    url:        ENV["DATABASE_URL"],
+    migrations: {
+      namespace: "Blog::Migrations",
+      directory: "#{__DIR__}/migrations",
+    },
   },
   mercure: {
     hubs: {

@@ -15,32 +15,28 @@ targets:
 dependencies:
   athena:
     github: athena-framework/framework
-    # version: ~> 0.22.0
     commit: b93089a8e9cce2d731916f2d0ec8024a50d8213a
-  athena-dotenv:
-    github: athena-framework/dotenv
-    version: ~> 0.2.0
-  athena-orm:
-    github: athena-framework/orm
-    commit: 19fe9193014c3770500c3a9979b42382ffe3c3ca
-  pg:
-    github: will/crystal-pg
-    version: ~> 0.31.0
-  micrate:
-    github: amberframework/micrate
-    commit: d2cb33b7ec4ada6f08d9415d22288270b90dce20
-  athena-mercure:
-    github: athena-framework/mercure
-    commit: c048f1306dee9d0163b02eed904f156e4f849cad
-  jwt:
-    github: crystal-community/jwt
-    version: ~> 1.7
-  athena-validator:
-    github: athena-framework/validator
-    commit: 79487ded2d99269e030335e158fb64e67916e97b
   athena-console:
     github: athena-framework/console
     commit: 8e9c75048515d7297bce48e2d6654a14b1325d05
+  athena-dotenv:
+    github: athena-framework/dotenv
+    version: ~> 0.2.0
+  athena-mercure:
+    github: athena-framework/mercure
+    commit: c048f1306dee9d0163b02eed904f156e4f849cad
+  athena-orm:
+    github: athena-framework/orm
+    commit: 25fa7f4c0aba0b3e370497636c2c0b0a475d23a1
+  athena-validator:
+    github: athena-framework/validator
+    commit: 79487ded2d99269e030335e158fb64e67916e97b
+  pg:
+    github: will/crystal-pg
+    version: ~> 0.31.0
+  jwt:
+    github: crystal-community/jwt
+    version: ~> 1.7
 
 development_dependencies:
   ameba:
@@ -48,4 +44,4 @@ development_dependencies:
     commit: f53fcd3382553121239c8f144aec5e27aeadbed8
   athena-spec:
     github: athena-framework/spec
-    version: ~> 0.4.0
+    commit: 4359548452e012ea5bc8794667112e4595687dd1
