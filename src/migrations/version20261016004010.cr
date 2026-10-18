@@ -4,7 +4,7 @@ class Blog::Migrations::Version20261016004010 < AORM::Migrations::AbstractMigrat
   end
 
   def up : Nil
-    self.add_sql <<-'SQL'
+    self.add_sql <<-SQL
       CREATE TABLE IF NOT EXISTS "articles"
       (
           "id"         BIGINT GENERATED ALWAYS AS IDENTITY NOT NULL PRIMARY KEY,

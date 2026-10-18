@@ -27,7 +27,7 @@ dependencies:
     commit: c048f1306dee9d0163b02eed904f156e4f849cad
   athena-orm:
     github: athena-framework/orm
-    commit: e032b30edebd10df2e5afe0255607179fbd1d326
+    commit: 9513c613d6829748b8e905d45db8a169c1c387cf
   athena-validator:
     github: athena-framework/validator
     commit: 506cffcf1f98723c75b498228cf58bc4059e61fc

@@ -51,7 +51,7 @@ shards:
 
   athena-orm:
     git: https://github.com/athena-framework/orm.git
-    version: 0.1.0+git.commit.e032b30edebd10df2e5afe0255607179fbd1d326
+    version: 0.1.0+git.commit.9513c613d6829748b8e905d45db8a169c1c387cf
 
   athena-routing:
     git: https://github.com/athena-framework/routing.git
