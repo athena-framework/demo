@@ -41,10 +41,6 @@ shards:
     git: https://github.com/athena-framework/http-kernel.git
     version: 0.1.0+git.commit.53812b285df35ced660dced1b6b41d5d1e5ea37b
 
-  athena-image_size:
-    git: https://github.com/athena-framework/image-size.git
-    version: 0.1.4
-
   athena-mercure:
     git: https://github.com/athena-framework/mercure.git
     version: 0.1.0+git.commit.c048f1306dee9d0163b02eed904f156e4f849cad
@@ -55,7 +51,7 @@ shards:
 
   athena-orm:
     git: https://github.com/athena-framework/orm.git
-    version: 0.1.0+git.commit.25fa7f4c0aba0b3e370497636c2c0b0a475d23a1
+    version: 0.1.0+git.commit.e032b30edebd10df2e5afe0255607179fbd1d326
 
   athena-routing:
     git: https://github.com/athena-framework/routing.git
@@ -67,7 +63,7 @@ shards:
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
-    version: 0.5.0+git.commit.79487ded2d99269e030335e158fb64e67916e97b
+    version: 0.5.0+git.commit.506cffcf1f98723c75b498228cf58bc4059e61fc
 
   bindata:
     git: https://github.com/spider-gazelle/bindata.git

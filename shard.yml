@@ -27,10 +27,10 @@ dependencies:
     commit: c048f1306dee9d0163b02eed904f156e4f849cad
   athena-orm:
     github: athena-framework/orm
-    commit: 25fa7f4c0aba0b3e370497636c2c0b0a475d23a1
+    commit: e032b30edebd10df2e5afe0255607179fbd1d326
   athena-validator:
     github: athena-framework/validator
-    commit: 79487ded2d99269e030335e158fb64e67916e97b
+    commit: 506cffcf1f98723c75b498228cf58bc4059e61fc
   pg:
     github: will/crystal-pg
     version: ~> 0.31.0
