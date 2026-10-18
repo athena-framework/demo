@@ -1,4 +1,3 @@
-# NOTICE: This lockfile contains some overrides from shard.override.yml
 version: 2.0
 shards:
   ameba:
@@ -7,7 +6,7 @@ shards:
 
   athena:
     git: https://github.com/athena-framework/framework.git
-    version: 0.22.0+git.commit.b93089a8e9cce2d731916f2d0ec8024a50d8213a
+    version: 0.23.0
 
   athena-clock:
     git: https://github.com/athena-framework/clock.git
@@ -15,55 +14,55 @@ shards:
 
   athena-console:
     git: https://github.com/athena-framework/console.git
-    version: 0.4.3+git.commit.8e9c75048515d7297bce48e2d6654a14b1325d05
+    version: 0.5.0
 
-  athena-contracts: # Overridden
+  athena-contracts:
     git: https://github.com/athena-framework/contracts.git
-    version: 0.1.0+git.commit.15eebbbb0012826de480e7fa802384d1a74f7f70
+    version: 0.1.1
 
-  athena-dependency_injection: # Overridden
+  athena-dependency_injection:
     git: https://github.com/athena-framework/dependency-injection.git
-    version: 0.4.5+git.commit.570640d6dac3a6940b003cdd7341356c288cd0fb
+    version: 0.4.6
 
   athena-dotenv:
     git: https://github.com/athena-framework/dotenv.git
     version: 0.2.1
 
-  athena-event_dispatcher: # Overridden
+  athena-event_dispatcher:
     git: https://github.com/athena-framework/event-dispatcher.git
-    version: 0.4.1+git.commit.06c86b6e77b93fc97a09ff9633c2028614d1ffa9
+    version: 0.4.2
 
-  athena-http: # Overridden
+  athena-http:
     git: https://github.com/athena-framework/http.git
-    version: 0.1.0+git.commit.6a14b43106c5f9aa5847cdf69c0bd9392483f00f
+    version: 0.1.1
 
-  athena-http_kernel: # Overridden
+  athena-http_kernel:
     git: https://github.com/athena-framework/http-kernel.git
-    version: 0.1.0+git.commit.53812b285df35ced660dced1b6b41d5d1e5ea37b
+    version: 0.2.0
 
   athena-mercure:
     git: https://github.com/athena-framework/mercure.git
-    version: 0.1.0+git.commit.c048f1306dee9d0163b02eed904f156e4f849cad
+    version: 0.2.0
 
   athena-mime:
     git: https://github.com/athena-framework/mime.git
-    version: 0.2.1
+    version: 0.2.2
 
   athena-orm:
     git: https://github.com/athena-framework/orm.git
-    version: 0.1.0+git.commit.9513c613d6829748b8e905d45db8a169c1c387cf
+    version: 0.1.0
 
   athena-routing:
     git: https://github.com/athena-framework/routing.git
-    version: 0.2.0
+    version: 0.2.1
 
   athena-spec:
     git: https://github.com/athena-framework/spec.git
-    version: 0.4.2+git.commit.4359548452e012ea5bc8794667112e4595687dd1
+    version: 0.4.3
 
   athena-validator:
     git: https://github.com/athena-framework/validator.git
-    version: 0.5.0+git.commit.506cffcf1f98723c75b498228cf58bc4059e61fc
+    version: 0.6.0
 
   bindata:
     git: https://github.com/spider-gazelle/bindata.git

@@ -15,22 +15,22 @@ targets:
 dependencies:
   athena:
     github: athena-framework/framework
-    commit: b93089a8e9cce2d731916f2d0ec8024a50d8213a
+    version: ~> 0.23.0
   athena-console:
     github: athena-framework/console
-    commit: 8e9c75048515d7297bce48e2d6654a14b1325d05
+    version: ~> 0.5.0
   athena-dotenv:
     github: athena-framework/dotenv
     version: ~> 0.2.0
   athena-mercure:
     github: athena-framework/mercure
-    commit: c048f1306dee9d0163b02eed904f156e4f849cad
+    version: ~> 0.2.0
   athena-orm:
     github: athena-framework/orm
-    commit: 9513c613d6829748b8e905d45db8a169c1c387cf
+    version: ~> 0.1.0
   athena-validator:
     github: athena-framework/validator
-    commit: 506cffcf1f98723c75b498228cf58bc4059e61fc
+    version: ~> 0.6.0
   pg:
     github: will/crystal-pg
     version: ~> 0.31.0
@@ -44,4 +44,4 @@ development_dependencies:
     commit: f53fcd3382553121239c8f144aec5e27aeadbed8
   athena-spec:
     github: athena-framework/spec
-    commit: 4359548452e012ea5bc8794667112e4595687dd1
+    version: ~> 0.4.0
