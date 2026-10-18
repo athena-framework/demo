@@ -1,9 +1,10 @@
 module Blog::Entities::UpdatedAtAware
-  getter! updated_at : Time
+  @[AORMA::Column]
+  property! updated_at : Time
 
-  protected def before_save : Nil
-    super
-
+  @[AORMA::PreUpdate]
+  @[AORMA::PrePersist]
+  def set_updated_at : Nil
     @updated_at = Time.utc
   end
 end

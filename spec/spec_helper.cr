@@ -3,17 +3,10 @@ ENV["ATHENA_ENV"] = "test"
 require "spec"
 require "../src/main"
 require "athena/spec"
-
-DATABASE = DB.open ENV["DATABASE_URL"]
-
-require "./integration_test_case"
+require "athena-orm/spec"
 
 Spec.before_suite do
-  Micrate.up DATABASE
-end
-
-Spec.after_suite do
-  DATABASE.close
+  AORM::Spec.migrate_database
 end
 
 ASPEC.run_all

@@ -7,7 +7,6 @@ The blog is intended to showcase various framework features while still being ap
 This includes:
 
 * A controller to handle CRUD operations on an `Article` entity, leveraging a simple repository pattern ORM
-* A custom [ACON::Command](https://athenaframework.org/Console/Command/) to run DB migrations
 * A simple request/transaction ID implementation using a dedicated [service](https://athenaframework.org/why_athena/#services) and [Event Listener](https://athenaframework.org/EventDispatcher/Annotations/AsEventListener/)
 * A database focused [ATHR::Interface](https://athenaframework.org/Framework/Controller/ValueResolvers/Interface/) to resolve an entity from the DB as a controller action argument
 * Unit/integration test on all of the above
@@ -26,7 +25,7 @@ If you prefer a more hands on approach, keep reading on to learn how to get it r
 * Start the database
   * Via the provided `docker-compose.yaml` file: `docker compose up -d`
 * Scaffold the DB schema
-  * `shards run console -- db:migrate`
+  * `shards run console -- orm migrations migrate`
 * Validate the setup by running the specs
   * `crystal spec`
 * Start the server
@@ -45,17 +44,11 @@ This application uses abstractions that are simpler, while still being impactful
 
 Some examples of this include:
 
-* The dedicated entity modules for `created_at`, `updated_at`, `deleted_at`
-  * Aren't really needed with there only being a single entity, but are simple/straightforward enough and will benefit things when more are needed
 * Using the `Article` entity as both the DB entity itself, and as a way to represent the request/response body
   * Given how simple the entity is, it probably is fine, but comes at the cost of tightly coupling your DB schema with the resource exposed to the client.
     A more flexible (but more verbose) option is to leverage dedicated [Data Transfer Objects](https://en.wikipedia.org/wiki/Data_transfer_object), such as `ArticleCreate` or `ArticleRead`
     that _only_ handle (de)serialization and validation, leaving all the business/DB logic up to the `Article` entity itself.
     The extra verbosity comes from not only the extra types, but also the logic required to map the one type to another.
-* The hard coded insert/update methods within `EntityManager`
-  * Could choose to handle these automatically by making some assumptions and defining like `#column_names` and `#column_values` methods on the base `Entity` type.
-    Then from here could build out the SQL to perform the insert.
-    The benefit being not needing to remember to define those/write the SQL by hand, but at the cost of possible edge cases if the assumptions don't hold true 100% of the time.
 
 ### Production Deployments
 
@@ -63,8 +56,7 @@ How to best deploy an application can be tricky since no application is the same
 As such, we are not going to get into the specifics of _HOW_ to deploy the blog API to production, but a few things to keep in mind when thinking about how you are:
 
 * Have some way to run the DB migrations
-  * Either continue using [micrate](https://github.com/amberframework/micrate), manually handling it, or some other external solution
-  * TIP: Don't forget to include the `db/` directory!
+  * Either continue using [Athena ORM Migrations](https://athenaframework.org/ORM/database_migrations/), manually handling it, or some other external solution
 * Use ENV vars for differences in infrastructure between environments
   * Code should be able to be open sourced at any moment without compromising any credentials
 * Write tests

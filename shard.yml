@@ -15,19 +15,28 @@ targets:
 dependencies:
   athena:
     github: athena-framework/framework
-    version: ~> 0.22.0
+    version: ~> 0.23.0
+  athena-console:
+    github: athena-framework/console
+    version: ~> 0.5.0
   athena-dotenv:
     github: athena-framework/dotenv
     version: ~> 0.2.0
+  athena-mercure:
+    github: athena-framework/mercure
+    version: ~> 0.2.0
+  athena-orm:
+    github: athena-framework/orm
+    version: ~> 0.1.0
+  athena-validator:
+    github: athena-framework/validator
+    version: ~> 0.6.0
   pg:
     github: will/crystal-pg
-    version: ~> 0.26.0
-  micrate:
-    github: amberframework/micrate
-    version: ~> 0.15.1
-  athena-mercure_bundle:
-    github: athena-framework/mercure-bundle
-    version: ~> 0.1.0
+    version: ~> 0.31.0
+  jwt:
+    github: crystal-community/jwt
+    version: ~> 1.7
 
 development_dependencies:
   ameba:
